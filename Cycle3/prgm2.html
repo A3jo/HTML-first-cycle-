@@ -1,27 +1,37 @@
-<!-- CSS Color
+<!-- JS
     Ajo jojo
     23mca008
-    Date: 06/10/2023-->
+    Date: 26/10/2023-->
+	<!doctype html>
 <html>
 <head>
-<title>Program 2</title>
 <style>
-h1{
-    font-size:30px;
-	}
-p{
-    color: red;
-	text-align:center;
+p {
+font-size : 30px;
+color : green;
+font-weight : bold;
+text-decoration : underline;
 }
 </style>
+<script>
+function add()
+{
+  var numOne, numTwo, sum;
+  numOne = parseInt(document.getElementById("first").value);
+  numTwo = parseInt(document.getElementById("second").value);
+  sum = numOne + numTwo;
+  document.getElementById("answer").value = sum;
+}
+</script>
 </head>
 <body>
+<center>
 <br><br>
-<h1>Wayanad</h1>
-<p>Wayanad is a rural district in Kerala state, southwest India. In the east, the Wayanad Wildlife Sanctuary is a lush, forested region with areas of high altitude, home to animals including Asiatic elephants, tigers, leopards and egrets. In the Ambukuthi Hills to the south, Edakkal Caves contain ancient petroglyphs, some dating back to the Neolithic age.<br>
-Area: 2132km<sup>2</sup><br>
-Populations: 8.17 Lakhs<br>
-Highest Elevation:2100m (6900ft)</p>
+<p>Enter the First Number: <input id="first"></p>
+<p>Enter the Second Number: <input id="second"></p>
+<button onclick="add()">Add</button>
+<p> <input id="answer"></p>
+</center>
 
 </body>
 </html>

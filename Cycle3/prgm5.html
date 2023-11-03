@@ -1,28 +1,25 @@
-<!-- CSS Color
+<!-- JS 
     Ajo jojo
     23mca008
-    Date: 10/10/2023-->
+    Date: 2/11/2023-->
 <html>
 <head>
-<title>Program 5</title>
-<style>
-h1{
-    font-family:Verdana;
-	text-align:center;
-	}
-p{
-    font-family:Courier New;
-	text-align:center;
-}
-</style>
+    <title>Change Text Color on Button Click</title>
 </head>
 <body>
-<br><br>
-<h1>Wayanad</h1>
-<p>Wayanad is a rural district in Kerala state, southwest India. In the east, the Wayanad Wildlife Sanctuary is a lush, forested region with areas of high altitude, home to animals including Asiatic elephants, tigers, leopards and egrets. In the Ambukuthi Hills to the south, Edakkal Caves contain ancient petroglyphs, some dating back to the Neolithic age.<br>
-Area: 2132km<sup>2</sup><br>
-Populations: 8.17 Lakhs<br>
-Highest Elevation:2100m (6900ft)</p>
+<center><br><br><br>
+    <p id="textToChange">With great power comes great responsibility.</p>
+    <button onclick="changeTextColor()">CLICK</button>
 
+    <script>
+        function changeTextColor() {
+            // Get the element with the ID "textToChange"
+            var textElement = document.getElementById("textToChange");
+
+            // Change the text color to blue
+            textElement.style.color = "blue";
+        }
+    </script>
+</center>
 </body>
 </html>

@@ -1,25 +1,31 @@
-<!-- CSS Color
+<!-- JS 
     Ajo jojo
     23mca008
-    Date: 10/10/2023-->
-	<!DOCTYPE html>
+    Date: 3/11/2023-->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Program10</title>
-    <style>
-        body {
-            text-align: center;
-            background: url("https://w7.pngwing.com/pngs/523/198/png-transparent-google-logo-google-search-google-play-google-text-logo-number-thumbnail.png");
-            background-size: 400px 200px;
-            background-repeat: repeat-y;
-            
-        }
-    </style>
+  <title>Change Background Color</title>
 </head>
-<body>
-    <h2>Background-repeat-property</h2>
+<body><center>
+  <h1>Click the button to change the background color!</h1>
+  <button id="colorButton">Change Color</button>
+</center>
+  <script>
+    // JavaScript code to change the background color
+    document.getElementById("colorButton").addEventListener("click", function() {
+      // Generate a random color using the getRandomColor function
+      document.body.style.backgroundColor = getRandomColor();
+    });
+
+    function getRandomColor() {
+      const letters = "0123456789ABCDEF";
+      let color = "#";
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+  </script>
 </body>
 </html>

@@ -1,27 +1,57 @@
-<!-- CSS Color
+<!-- JS 
     Ajo jojo
     23mca008
-    Date: 10/10/2023-->
-<!DOCTYPE html>
-<html lang="en">
-
+    Date: 3/11/2023-->
+	<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Program11</title>
-    <style>
-        p{
-            text-indent: 20px;
-        }
-    </style>
+  <title>Mouse Hover </title>
+  <style>
+    #container {
+      width: 300px;
+      height: 300px;
+      background-color: #eee;
+      text-align: center;
+      padding: 20px;
+      transition: background-color 0.3s;
+      cursor: pointer;
+    }
+  </style>
 </head>
+<body><center>
+  <div id="container">
+    <h1>Hover over me!</h1>
+  </div>
 
-<body>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus minima commodi fugiat nemo doloremque
-        repudiandae reprehenderit sint dignissimos vero modi. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-        Deserunt deleniti autem laudantium est vitae hic nobis maiores voluptatibus officiis velit.
-    </p>
+  <script>
+    // Function to change content on mouse hover
+    function changeContent() {
+      const container = document.getElementById('container');
+      container.innerHTML = '';
+      container.style.backgroundColor = 'lightblue';
 
+      const newImage = document.createElement('img');
+      newImage.src = 'leo (1).jpg';
+      newImage.alt = 'New Image';
+      container.appendChild(newImage);
+
+      const newText = document.createElement('p');
+      newText.textContent = 'Leo (also marketed as Leo: Bloody Sweet) is a 2023 Indian Tamil-language action thriller film directed by Lokesh Kanagaraj .';
+      container.appendChild(newText);
+    }
+
+    // Function to reset content on mouse out
+    function resetContent() {
+      const container = document.getElementById('container');
+      container.innerHTML = '<h1>Hover over me!</h1>';
+      container.style.backgroundColor = '#eee';
+    }
+
+    // Add event listeners
+    const container = document.getElementById('container');
+    container.addEventListener('mouseenter', changeContent);
+    container.addEventListener('mouseleave', resetContent);
+  </script>
+  </center>
 </body>
-
 </html>

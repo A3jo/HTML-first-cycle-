@@ -1,26 +1,48 @@
-<!-- CSS Color
+<html>
+<!-- JS 
     Ajo jojo
     23mca008
-    Date: 10/10/2023-->
-	
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>program8</title>
-    <style>
-        p{
-            font: italic 20px verdana;
-
-        }
-    </style>
+    Date: 2/11/2023-->
+	<html>
+	<head>
+<title>Program 8</title>
+<style>
+h1{
+    color:green;
+    text-decoration:underline;
+}
+p{
+  color:green;
+  font-size:40px;
+}
+</style>
 </head>
-
 <body>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel repellat nostrum aliquid possimus aperiam
-        exercitationem! Vel nisi quae sapiente nesciunt. Ea voluptatum nemo dolores molestiae?</p>
-</body>
+  <br><br><br>
+  <center>
+  <h1>Calculate Your Age</h1><br><br>
+  <label for="firstNameInput">First Name:</label>
+  <input type="text" id="firstNameInput">
+  <br><br>
+  <label for="yearOfBirthInput">Year of Birth:</label>
+  <input type="text" id="yearOfBirthInput">
+  <br><br>
+  <button id="calculateAgeButton">Calculate Age</button>
+  <p id="result"></p>
 
-</html>	
+  <script>
+    document.getElementById("calculateAgeButton").addEventListener("click", function() {
+      // Get user inputs
+      const firstName = document.getElementById("firstNameInput").value;
+      const yearOfBirth = document.getElementById("yearOfBirthInput").value;
+
+      // Calculate age
+      const currentYear = new Date().getFullYear();
+      const age = currentYear - parseInt(yearOfBirth);
+
+      // Display the age on the web page
+      document.getElementById("result").textContent = `Hai ${firstName}, you are ${age} years old.`;
+    });
+  </script>
+</body>
+</html>
