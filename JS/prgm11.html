@@ -1,0 +1,57 @@
+<!-- JS 
+    Ajo jojo
+    23mca008
+    Date: 3/11/2023-->
+	<!DOCTYPE html>
+<html>
+<head>
+  <title>Mouse Hover </title>
+  <style>
+    #container {
+      width: 300px;
+      height: 300px;
+      background-color: #eee;
+      text-align: center;
+      padding: 20px;
+      transition: background-color 0.3s;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body><center>
+  <div id="container">
+    <h1>Hover over me!</h1>
+  </div>
+
+  <script>
+    // Function to change content on mouse hover
+    function changeContent() {
+      const container = document.getElementById('container');
+      container.innerHTML = '';
+      container.style.backgroundColor = 'lightblue';
+
+      const newImage = document.createElement('img');
+      newImage.src = 'leo (1).jpg';
+      newImage.alt = 'New Image';
+      container.appendChild(newImage);
+
+      const newText = document.createElement('p');
+      newText.textContent = 'Leo (also marketed as Leo: Bloody Sweet) is a 2023 Indian Tamil-language action thriller film directed by Lokesh Kanagaraj .';
+      container.appendChild(newText);
+    }
+
+    // Function to reset content on mouse out
+    function resetContent() {
+      const container = document.getElementById('container');
+      container.innerHTML = '<h1>Hover over me!</h1>';
+      container.style.backgroundColor = '#eee';
+    }
+
+    // Add event listeners
+    const container = document.getElementById('container');
+    container.addEventListener('mouseenter', changeContent);
+    container.addEventListener('mouseleave', resetContent);
+  </script>
+  </center>
+</body>
+</html>
